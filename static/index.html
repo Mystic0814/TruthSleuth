@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TruthSleuth 🕵️‍♂️</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main>
+    <h1>🕵️ TruthSleuth</h1>
+    <p class="subtitle">AI-powered fake news detector and fact checker</p>
+    <textarea id="input" placeholder="Paste any claim, headline, or article text..."></textarea>
+    <div class="controls">
+      <button id="analyzeBtn">Check Credibility</button>
+    </div>
+    <div id="loading" class="loading hidden">Analyzing, please wait...</div>
+    <div id="result" class="result hidden">
+      <h2>Result</h2>
+      <p><strong>Score:</strong> <span id="score"></span>/100</p>
+      <p><strong>Classification:</strong> <span id="classification"></span></p>
+      <p><strong>Summary:</strong> <span id="summary"></span></p>
+      <p><strong>Reasoning:</strong> <span id="reasoning"></span></p>
+      <div class="section">
+        <h3>Key Indicators</h3>
+        <ul id="indicators"></ul>
+      </div>
+      <div class="section">
+        <h3>Concerns</h3>
+        <ul id="concerns"></ul>
+      </div>
+      <div class="section">
+        <h3>Sources</h3>
+        <ul id="sources"></ul>
+      </div>
+    </div>
+    <div id="error" class="error hidden"></div>
+  </main>
+  <footer>
+    <p>Powered by OpenAI • Built by Madhav Mathur</p>
+  </footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
