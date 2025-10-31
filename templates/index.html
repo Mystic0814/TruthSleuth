@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TruthSleuth 🕵️</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main>
+    <h1>🕵️ TruthSleuth</h1>
+    <p class="subtitle">AI-powered Fake News Detector & Credibility Analyzer</p>
+
+    <textarea id="input" placeholder="Paste any headline, post, or claim..."></textarea>
+    <div class="controls">
+      <button id="analyzeBtn">Check Credibility</button>
+    </div>
+
+    <div id="loading" class="loading hidden">Analyzing, please wait...</div>
+
+    <div id="result" class="result hidden">
+      <h2>Result</h2>
+      <div id="scoreGauge" class="score-gauge">--</div>
+      <p><strong>Score:</strong> <span id="score"></span>/100</p>
+      <p><strong>Classifi
