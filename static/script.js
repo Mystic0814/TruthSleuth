@@ -1,4 +1,4 @@
-const API_URL = "/analyze";
+const API_URL = "https://truthsleuth.onrender.com/analyze";
 
 const analyzeBtn = document.getElementById("analyzeBtn");
 const input = document.getElementById("input");
